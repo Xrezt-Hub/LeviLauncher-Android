@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <!-- left dirt face -->
+    <path android:fillColor="#8B5A2B" android:pathData="M8,18 L32,30 L32,58 L8,46 Z" />
+    <!-- right dirt face -->
+    <path android:fillColor="#6F4520" android:pathData="M32,30 L56,18 L56,46 L32,58 Z" />
+    <!-- grass overhang left / right -->
+    <path android:fillColor="#4A9A32" android:pathData="M8,18 L32,30 L32,38 L8,26 Z" />
+    <path android:fillColor="#3C8228" android:pathData="M32,30 L56,18 L56,26 L32,38 Z" />
+    <!-- top grass face -->
+    <path android:fillColor="#5DBB3F" android:pathData="M32,6 L56,18 L32,30 L8,18 Z" />
+    <!-- top texture -->
+    <path android:fillColor="#4FA533" android:pathData="M30,12 L34,14 L30,16 L26,14 Z M40,18 L44,20 L40,22 L36,20 Z M20,19 L24,21 L20,23 L16,21 Z" />
+    <!-- dirt texture -->
+    <path android:fillColor="#A06A36" android:pathData="M14,38 L18,40 L18,43 L14,41 Z M22,44 L26,46 L26,49 L22,47 Z" />
+    <path android:fillColor="#573619" android:pathData="M38,46 L42,44 L42,47 L38,49 Z M46,38 L50,36 L50,39 L46,41 Z" />
+    <!-- outline -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#1F2937"
+        android:strokeWidth="1.6"
+        android:strokeLineJoin="round"
+        android:pathData="M32,6 L56,18 L56,46 L32,58 L8,46 L8,18 Z M8,18 L32,30 L56,18 M32,30 L32,58" />
+</vector>
