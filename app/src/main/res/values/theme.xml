@@ -14,7 +14,7 @@
         <item name="android:colorBackground">@color/background</item>
         <item name="colorOnBackground">@color/on_background</item>
         <item name="colorOutline">@color/outline</item>
-        <item name="android:windowBackground">@drawable/bg_wallpaper</item>
+        <item name="android:windowBackground">@color/background</item>
         <item name="android:windowDisablePreview">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
@@ -39,7 +39,7 @@
 
     <style name="LauncherRestartTheme" parent="Base.Theme.FullScreen">
         <item name="android:fontFamily">@font/misans</item>
-        <item name="android:windowBackground">@drawable/bg_wallpaper</item>
+        <item name="android:windowBackground">@color/background</item>
         <item name="android:windowDisablePreview">true</item>
         <item name="android:windowAnimationStyle">@null</item>
         <item name="android:windowContentTransitions">false</item>
