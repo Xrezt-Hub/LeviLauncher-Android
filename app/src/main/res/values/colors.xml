@@ -54,4 +54,6 @@
     <color name="ui_danger_soft">#3A1D1F</color>
     <color name="ui_warning_soft">#33270F</color>
     <color name="ui_warning">#FBBF24</color>
+
+    <color name="ic_launcher_adaptive_back">#10B981</color>
 </resources>
