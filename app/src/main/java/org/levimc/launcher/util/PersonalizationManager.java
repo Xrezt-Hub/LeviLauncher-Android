@@ -106,6 +106,34 @@ public class PersonalizationManager {
             if (previous != null && !previous.equals(poster)) deleteBackgroundFile(previous);
             sChangeGeneration.incrementAndGet();
         }
+
+        installDefaultWallpaperIfNeeded();
+    }
+
+    /** Copies assets/bg_wallpaper.jpg in as the default wallpaper on first run. */
+    private void installDefaultWallpaperIfNeeded() {
+        if (prefs.getBoolean("default_wallpaper_installed", false)) return;
+        if (hasBackgroundImage()) return; // don't override a wallpaper the user already set
+        try {
+            File directory = new File(context.getFilesDir(), "personalization");
+            if (!directory.exists()) directory.mkdirs();
+            File dest = new File(directory, "background_default.jpg");
+            try (InputStream input = context.getAssets().open("bg_wallpaper.jpg");
+                 FileOutputStream output = new FileOutputStream(dest)) {
+                byte[] buffer = new byte[65536];
+                int count;
+                while ((count = input.read(buffer)) != -1) output.write(buffer, 0, count);
+            }
+            prefs.edit()
+                    .putString(KEY_BG_IMAGE_PATH, dest.getAbsolutePath())
+                    .putString(KEY_BG_POSTER_PATH, dest.getAbsolutePath())
+                    .putString(KEY_BG_MEDIA_TYPE, "image")
+                    .putBoolean("default_wallpaper_installed", true)
+                    .apply();
+            sChangeGeneration.incrementAndGet();
+        } catch (Exception e) {
+            // asset missing or IO error, skip silently
+        }
     }
 
     /** Theme color of the mode in use. Light and dark modes keep their own color, as on Windows. */
