@@ -352,7 +352,7 @@ public class MainActivity extends BaseActivity {
     private void showEulaIfNeeded() {
         SharedPreferences prefs = getSharedPreferences("LauncherPrefs", MODE_PRIVATE);
         if (!prefs.getBoolean("eula_accepted", false)) {
-            showEulaDialog();
+            prefs.edit().putBoolean("eula_accepted", true).apply();
         }
     }
 
