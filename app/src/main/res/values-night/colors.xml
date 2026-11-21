@@ -16,9 +16,9 @@
     <color name="error">#F87171</color>
     <color name="on_error">#000000</color>
 
-    <color name="background">#000000</color>
-    <color name="surface">#151518</color>
-    <color name="surface_variant">#1A1A1A</color>
+    <color name="background">#00000000</color>
+    <color name="surface">#CC151518</color>
+    <color name="surface_variant">#CC1A1A1A</color>
     <color name="on_background">#FAFAFA</color>
     <color name="on_surface">#FAFAFA</color>
     <color name="on_surface_variant">#34D399</color>
