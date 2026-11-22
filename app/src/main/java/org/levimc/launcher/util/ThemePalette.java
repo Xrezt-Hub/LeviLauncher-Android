@@ -10,8 +10,7 @@ public final class ThemePalette {
     private ThemePalette() {
     }
 
-    public static final int DEFAULT_ACCENT = 0xFF10B981;
-
+    public static final int DEFAULT_ACCENT = 0xFF71717A;
     /** Windows THEME_GROUPS.preset, in display order. */
     public static final int[] PRESETS = {
             0xFF10B981, // emerald
